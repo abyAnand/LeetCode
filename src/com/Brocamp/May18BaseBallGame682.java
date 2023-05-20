@@ -1,7 +1,6 @@
 package com.Brocamp;
 
-import java.util.Arrays;
-import java.util.Objects;
+
 import java.util.Stack;
 
 public class May18BaseBallGame682 {
@@ -73,7 +72,6 @@ public class May18BaseBallGame682 {
 
     public static int calPoints(String[] ops) {
 
-        int sum = 0;
         Stack<Integer> stack = new Stack<>();
 
         for (String op : ops) {
@@ -96,10 +94,7 @@ public class May18BaseBallGame682 {
             }
         }
 
-        while (!stack.isEmpty()) {
-            sum += stack.pop();
-        }
 
-        return sum;
+        return stack.stream().mapToInt(Integer::intValue).sum();
     }
 }
