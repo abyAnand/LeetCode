@@ -1,2 +1,4 @@
 # Project exclude paths
 /out/
+/src/com/demo/
+/src/com/test/
